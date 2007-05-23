@@ -16,7 +16,7 @@ sub extractor {
 
     my %pkg_info = ExtUtils::PkgConfig->find('libextractor');
 
-    $self->makemaker_args( INC     => '-Iperl_glue'     );
+    $self->makemaker_args( INC     => '-I.'             );
     $self->makemaker_args( LIBS    => $pkg_info{libs}   );
     $self->makemaker_args( CCFLAGS => $pkg_info{cflags} );
 
@@ -32,7 +32,7 @@ sub xs_files {
     my @OBJECT;
     my %XS;
 
-    for my $xs (<xs/*.xs>) {
+    for my $xs (<*.xs>) {
         (my $c = $xs) =~ s/\.xs$/\.c/i;
         (my $o = $xs) =~ s/\.xs$/\$(OBJ_EXT)/i;
 
@@ -41,7 +41,7 @@ sub xs_files {
         push @clean, $o;
     }
 
-    for my $c (<perl_glue/*.c>) {
+    for my $c (qw/perl_extractor.c/) {
         (my $o = $c) =~ s/\.c$/\$(OBJ_EXT)/i;
 
         push @OBJECT, $o;

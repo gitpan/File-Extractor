@@ -1,6 +1,7 @@
 Changes
 examples/extract.pl
 ext/Module/Install/PRIVATE/File/Extractor.pm
+Extractor.xs
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -18,15 +19,16 @@ Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
-perl_glue/perl_extractor.c
-perl_glue/perl_extractor.h
-perl_glue/ppport.h
+perl_extractor.c
+perl_extractor.h
+ppport.h
 README
 t/00-load.t
+t/basic.t
+t/data/7peoples.png
 t/kwalitee.t
 t/notabs.t
 t/pod-coverage.t
 t/pod.t
 t/strict.t
-xs/Extractor.xs
-xs/typemap
+typemap
