@@ -3,7 +3,10 @@ abstract: Extract meta-data from arbitrary files
 author: Florian Ragwitz, C<< <rafl at debian.org> >>
 build_requires: 
   ExtUtils::PkgConfig: 0
+  IO::File: 0
+  Test::Exception: 0
   Test::More: 0
+  Test::NoWarnings: 0
 distribution_type: module
 generated_by: Module::Install version 0.67
 license: perl
@@ -16,4 +19,4 @@ no_index:
     - ext
     - inc
     - t
-version: 0.02
+version: 0.03
