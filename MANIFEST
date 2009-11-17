@@ -2,13 +2,10 @@ Changes
 examples/extract.pl
 ext/Module/Install/PRIVATE/File/Extractor.pm
 Extractor.xs
-inc/Module/AutoInstall.pm
 inc/Module/Install.pm
-inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
-inc/Module/Install/Include.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
 inc/Module/Install/PRIVATE/File/Extractor.pm
@@ -26,6 +23,7 @@ README
 t/00-load.t
 t/basic.t
 t/data/7peoples.png
+t/destroy.t
 t/kwalitee.t
 t/notabs.t
 t/pod-coverage.t
